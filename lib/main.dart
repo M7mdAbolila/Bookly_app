@@ -11,14 +11,16 @@ void main() {
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});
 
-  @override
+  @override       
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: kPrimaryColor,
-        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+        textTheme: GoogleFonts.montserratTextTheme(
+          ThemeData.dark().textTheme,
+        ),
       ),
       home: const SplashView(),
     );

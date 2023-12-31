@@ -8,20 +8,25 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         const Icon(
           FontAwesomeIcons.solidStar,
           color: Colors.amber,
+          size: 16,
         ),
-        const SizedBox(width: 6.3),
+        const SizedBox(width: 10),
         Text(
           '4.8',
-          style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),
+          style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
         ),
-        const SizedBox(width: 6.3),
+        const SizedBox(width: 10),
         Text(
           '(155)',
-          style: Styles.textStyle14.copyWith(color: Colors.grey),
+          style: Styles.textStyle14.copyWith(
+            color: Colors.white.withOpacity(.5),
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ],
     );

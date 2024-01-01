@@ -4,6 +4,8 @@ import 'package:bookly_app/features/home/presentation/views/widgets/book_item.da
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_action.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'similar_books_list_view.dart';
 
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({super.key});
@@ -26,11 +28,11 @@ class BookDetailsBody extends StatelessWidget {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * .5,
-            child: const Text(
+            child: Text(
               'Harry Potter and the Goblet of Fire ',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: Styles.textStyle20,
+              style: GoogleFonts.lora(textStyle: Styles.textStyle20),
             ),
           ),
           const SizedBox(
@@ -53,6 +55,25 @@ class BookDetailsBody extends StatelessWidget {
             height: 18,
           ),
           const BooksAction(),
+          const SizedBox(
+            height: 40,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          const SimilarBooksListView(),
+          const SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );

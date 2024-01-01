@@ -2,6 +2,7 @@ import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_details_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_item.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/books_action.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsBody extends StatelessWidget {
@@ -23,11 +24,14 @@ class BookDetailsBody extends StatelessWidget {
           const SizedBox(
             height: 46,
           ),
-          const Text(
-            'Harry Potter and the Goblet of Fire ',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: Styles.textStyle20,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * .5,
+            child: const Text(
+              'Harry Potter and the Goblet of Fire ',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: Styles.textStyle20,
+            ),
           ),
           const SizedBox(
             height: 6,
@@ -45,6 +49,10 @@ class BookDetailsBody extends StatelessWidget {
             height: 18,
           ),
           const BookRating(),
+          const SizedBox(
+            height: 18,
+          ),
+          const BooksAction(),
         ],
       ),
     );

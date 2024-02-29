@@ -20,7 +20,9 @@ class FeaturedBooksListView extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(right: 14),
+                    padding: const EdgeInsets.only(
+                      right: 14,
+                    ),
                     child: BookItem(
                       imageUrl:
                           state.books[index].volumeInfo.imageLinks.thumbnail,
@@ -29,7 +31,9 @@ class FeaturedBooksListView extends StatelessWidget {
                 }),
           );
         } else if (state is FeaturedBooksFailure) {
-          return CustomErrorWidget(errMessage: state.errMessage);
+          return CustomErrorWidget(
+            errMessage: state.errMessage,
+          );
         } else {
           return const CustomLoadingWidget();
         }

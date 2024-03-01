@@ -2,6 +2,7 @@ import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../../../core/utils/styles.dart';
 import 'custom_search_text_field.dart';
@@ -45,9 +46,12 @@ class SearchResultListView extends StatelessWidget {
       padding: EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
-          child: BestSellerListViewItem(),
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          // child: BestSellerListViewItem(
+
+          // ),
+          child: Container(),
         );
       },
     );

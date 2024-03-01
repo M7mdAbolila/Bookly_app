@@ -30,7 +30,7 @@ class BestSellerListViewItem extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: 2.5 / 4,
                 child: CachedNetworkImage(
-                  imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+                  imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
                   fit: BoxFit.fill,
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                   placeholder: (context, url) => const CustomLoadingWidget(),
